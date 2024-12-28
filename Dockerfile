@@ -14,4 +14,4 @@ RUN pip install -r requirements.txt
 EXPOSE 5000
 
 # Запускаем приложение при старте контейнера
-CMD ["python", "-m", "flask", "main", "--host=0.0.0.0"]
+CMD ["python", "-m", "flask", "run", "--host=0.0.0.0"]

@@ -1,4 +1,5 @@
 from app import create_app
+from waitress import serve
 
 app = create_app()
 
@@ -6,7 +7,7 @@ app = create_app()
 if __name__ == '__main__':
     port: int = app.config.get('FLASK_RUN_PORT', 5000)
     debug = app.config.get('FLASK_DEBUG', False)
-    app.run(debug=debug, port=port)
+    serve(app, port=port)
 
 
 @app.errorhandler(413)

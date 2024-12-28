@@ -10,13 +10,13 @@ RUN pip install --upgrade pip  && \
 
 
 # Копируем файлы приложения внутрь контейнера
-COPY . .
+COPY . ./
 
 # Устанавливаем зависимости из requirements.txt
 RUN apt-get update && \
     apt-get install -y libsm6 libxext6 libxrender-dev libgl1-mesa-glx
 # Открываем порт 5000 для доступа к приложению
-EXPOSE 5000
+EXPOSE 80
 
 # Запускаем приложение при старте контейнера
 CMD ["flask", "run", "--host=0.0.0.0", "--port=5000"]

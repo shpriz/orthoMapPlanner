@@ -15,4 +15,4 @@ RUN apt-get update && \
 EXPOSE 5000
 
 # Запускаем приложение при старте контейнера
-CMD ["python", "-m", "flask", "run", "--host=0.0.0.0"]
+CMD ["flask", "run", "--host=0.0.0.0", "--port=5000"]

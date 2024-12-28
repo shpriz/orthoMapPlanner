@@ -1,0 +1,50 @@
+/* Общие стили */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Панель с выбором типа измерений */
+#controls-section {
+    position: fixed;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 10px;
+    border-radius: 8px;
+    z-index: 10;
+}
+
+/* Стили для выпадающего списка */
+.measurement-select {
+    padding: 5px;
+    font-size: 16px;
+}
+
+/* Основное содержимое страницы */
+#canvas-container {
+    position: relative;
+    margin-top: 60px;  /* Чтобы оставалось место для панели */
+    text-align: center;
+}
+
+/* Стили для канваса */
+#drawingCanvas {
+    border: 1px solid #ccc;
+    max-width: 100%;
+    height: auto;
+}
+
+/* Результаты скрыты */
+#results {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 10px;
+    border-radius: 5px;
+    display: none;
+}

@@ -5,7 +5,7 @@ app = create_app()
 
 if __name__ == '__main__':
     port: int = app.config.get('FLASK_RUN_PORT', 5000)
-    debug = app.config.get('FLASK_DEBUG', True)
+    debug = app.config.get('FLASK_DEBUG', False)
     app.run(debug=debug, port=port)
 
 
